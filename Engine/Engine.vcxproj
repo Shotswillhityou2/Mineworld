@@ -137,6 +137,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\EventSystem\EventBus.h" />
+    <ClInclude Include="src\EventSystem\ApplicationEvent.h" />
     <ClInclude Include="src\EventSystem\BaseEvent.h" />
     <ClInclude Include="src\EventSystem\KeyEvent.h" />
     <ClInclude Include="src\EventSystem\MouseEvent.h" />
@@ -146,6 +148,7 @@
     <ClInclude Include="Engine.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\EventSystem\EventBus.cpp" />
     <ClCompile Include="src\Logger\Logger.cpp" />
     <ClCompile Include="src\ComponentSystem\ComponentSystem.cpp" />
     <ClCompile Include="src\Application.cpp" />

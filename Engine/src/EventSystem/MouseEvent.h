@@ -3,37 +3,64 @@
 namespace Engine {
 	class MouseButtonPressedEvent :public BaseEvent {
 	public:
-		MouseButtonPressedEvent(){}
+		MouseButtonPressedEvent(int button):m_Button(button){}
 		~MouseButtonPressedEvent(){}
 
-	private:
+		inline int getButton() { return m_Button; }
 
+		std::string toString()override { std::stringstream s; s << "MouseButtonPressed: " + m_Button; return s.str(); }
+
+		SET_CATEGORY_FLAGS(MouseEvent)
+		SET_TYPE_FLAGS(MouseButtonPressed)
+	private:
+		int m_Button;
 	};
 
 	class MouseButtonReleasedEvent :public BaseEvent {
 	public:
-		MouseButtonReleasedEvent(){}
+		MouseButtonReleasedEvent(int button):m_Button(button){}
 		~MouseButtonReleasedEvent(){}
 
-	private:
+		inline int getButton() { return m_Button; }
 
+		std::string toString()override { std::stringstream s; s << "MouseButtonReleased: " + m_Button; return s.str(); }
+
+		SET_CATEGORY_FLAGS(MouseEvent)
+		SET_TYPE_FLAGS(MouseButtonReleased)
+	private:
+		int m_Button;
 	};
 
 	class MouseScrolledEvent :public BaseEvent {
 	public:
-		MouseScrolledEvent(){}
+		MouseScrolledEvent(int x,int y):m_Y(y),m_X(x){}
 		~MouseScrolledEvent(){}
 
-	private:
+		inline int getXOffset() { return m_X; }
+		inline int getYOffset() { return m_Y; }
 
+		std::string toString()override { std::stringstream s; s << "MouseScrolled: " << "X: " << m_X << " Y: " << m_Y; return s.str(); }
+
+		SET_CATEGORY_FLAGS(MouseEvent)
+		SET_TYPE_FLAGS(MouseScrolled)
+	private:
+	private:
+		int m_X, m_Y;
 	};
 
 	class MouseMovedEvent :public BaseEvent {
 	public:
-		MouseMovedEvent(){}
+		MouseMovedEvent(int x,int y):m_X(x),m_Y(y){}
 		~MouseMovedEvent(){}
 
-	private:
+		inline int getX() { return m_X; }
+		inline int getY() { return m_Y; }
 
+		std::string toString()override { std::stringstream s; s << "MouseMoved: " << "X: " << m_X << " Y: " << m_Y; return s.str(); }
+
+		SET_CATEGORY_FLAGS(MouseEvent)
+		SET_TYPE_FLAGS(MouseMoved)
+	private:
+		int m_X, m_Y;
 	};
 }

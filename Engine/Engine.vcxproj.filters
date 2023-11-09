@@ -36,6 +36,12 @@
     <ClInclude Include="src\EventSystem\MouseEvent.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="src\EventSystem\ApplicationEvent.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="src\EventSystem\EventBus.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Application.cpp">
@@ -45,6 +51,9 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="src\Logger\Logger.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EventSystem\EventBus.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

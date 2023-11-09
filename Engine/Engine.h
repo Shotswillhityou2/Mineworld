@@ -3,3 +3,4 @@
 
 #include "src/EventSystem/KeyEvent.h"
 #include "src/EventSystem/MouseEvent.h"
+#include "src/EventSystem/ApplicationEvent.h"

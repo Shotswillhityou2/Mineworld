@@ -16,11 +16,12 @@ namespace Engine {
 
 	void Application::run()
 	{
-		KeyPressedEvent e(69, 420);
+		
 
 		while (true) {
-			if(m_ComponentSystem->getLogger()->isDebug())
-				m_ComponentSystem->getLogger()->getLogger()->info(e.toString());
+			WindowResizedEvent* e=new WindowResizedEvent(69, 420);
+			m_ComponentSystem->getEventBus()->pushEvent(e);
+			m_ComponentSystem->getEventBus()->processEvents();
 		}
 	}
 }
