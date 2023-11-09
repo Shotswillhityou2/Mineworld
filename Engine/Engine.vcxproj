@@ -137,6 +137,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\EventSystem\BaseEvent.h" />
+    <ClInclude Include="src\EventSystem\KeyEvent.h" />
     <ClInclude Include="src\Logger\Logger.h" />
     <ClInclude Include="src\ComponentSystem\ComponentSystem.h" />
     <ClInclude Include="src\Application.h" />
