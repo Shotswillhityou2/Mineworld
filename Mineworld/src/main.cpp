@@ -1,5 +1,6 @@
-#include "src/test.h"
+#include <Engine.h>
 
 int main() {
-	Test();
+	Engine::Application* app = new Engine::Application();
+	app->run();
 }
