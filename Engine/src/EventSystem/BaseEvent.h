@@ -1,5 +1,10 @@
 #pragma once
+#include<string>
+#include <sstream>
 namespace Engine {
+
+#define SET_CATEGORY_FLAGS(x) EventCategory getCategory()override{return x;}
+#define SET_TYPE_FLAGS(x)EventType getType()override{return x;}
 
 	enum EventCategory {
 		KeyEvent,MouseEvent,ApplicationEvent,NullEvent
@@ -20,7 +25,7 @@ namespace Engine {
 
 		virtual EventCategory getCategory() { return NullEvent; }
 		virtual EventType getType() { return NullType; }
-		static EventType getStaticType() { return NullType; }
+		virtual std::string toString() { return ""; }
 	private:
 
 	};
