@@ -14,7 +14,7 @@ namespace Engine {
 	void Application::run()
 	{
 		while (true) {
-			
+			m_ComponentSystem->getLogger()->getLogger()->info("Hello World");
 		}
 	}
 }
