@@ -1,4 +1,7 @@
 #pragma once
+
+#include "ComponentSystem/ComponentSystem.h"
+
 namespace Engine {
 	class Application
 	{
@@ -8,7 +11,7 @@ namespace Engine {
 
 		void run();
 	private:
-
+		ComponentSystem* m_ComponentSystem;
 	};
 }
 

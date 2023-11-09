@@ -135,10 +135,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Logger\Logger.h" />
+    <ClInclude Include="src\ComponentSystem\ComponentSystem.h" />
     <ClInclude Include="src\Application.h" />
     <ClInclude Include="Engine.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Logger\Logger.cpp" />
+    <ClCompile Include="src\ComponentSystem\ComponentSystem.cpp" />
     <ClCompile Include="src\Application.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

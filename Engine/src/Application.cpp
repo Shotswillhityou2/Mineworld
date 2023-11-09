@@ -3,7 +3,7 @@
 namespace Engine {
 	Application::Application()
 	{
-
+		m_ComponentSystem = new ComponentSystem();
 	}
 
 	Application::~Application()
@@ -14,7 +14,7 @@ namespace Engine {
 	void Application::run()
 	{
 		while (true) {
-			std::cout << "Hello World" << std::endl;
+			
 		}
 	}
 }
