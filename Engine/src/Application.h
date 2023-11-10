@@ -10,6 +10,7 @@ namespace Engine {
 		~Application();
 
 		void run();
+		void init();
 	private:
 		ComponentSystem* m_ComponentSystem;
 	};
